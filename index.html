@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f1ea">
+  <meta name="description" content="Bouquets personalizados, flores para casamentos e eventos e bouquets disponíveis 24 horas pela J’Adore Floral Designers.">
+  <title>J’Adore Floral Designers — Flores para momentos que ficam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F8F1EA;
+      --soft-pink: #F7C4CA;
+      --ink: #292522;
+      --muted: #756C67;
+      --leaf: #748066;
+      --gold: #A88A54;
+      --white: #FFFFFF;
+      --line: rgba(41, 37, 34, .18);
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 24px;
+      --space-6: 32px;
+      --space-7: 48px;
+      --space-8: 64px;
+      --space-9: 80px;
+      --radius: 3px;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', Arial, sans-serif;
+      --page: min(1280px, calc(100% - 88px));
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: var(--sans); font-size: 15px; line-height: 1.6; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    figure { margin: 0; }
+    a { color: inherit; }
+    .wrap { width: var(--page); margin-inline: auto; }
+    .eyebrow { margin: 0 0 16px; color: var(--leaf); font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: .98; }
+    h1 { max-width: 590px; margin-bottom: 20px; font-size: clamp(52px, 7vw, 90px); letter-spacing: -.035em; }
+    h2 { margin-bottom: 18px; font-size: clamp(42px, 5vw, 62px); letter-spacing: -.025em; }
+    h3 { margin-bottom: 7px; font-size: 29px; }
+    .body-large { max-width: 470px; color: var(--muted); font-size: 17px; line-height: 1.65; }
+    .section-kicker { margin-bottom: 15px; color: var(--gold); font: 600 10px var(--sans); letter-spacing: .2em; text-transform: uppercase; }
+
+    .site-header { position: relative; z-index: 2; background: rgba(248, 241, 234, .96); }
+    .header-inner { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; flex: 0 0 auto; align-items: center; width: 205px; }
+    .brand img { width: 100%; height: auto; }
+    .site-nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 42px); }
+    .site-nav a, .header-social { text-decoration: none; font-size: 11px; letter-spacing: .11em; text-transform: uppercase; transition: color .2s ease; }
+    .site-nav a:hover, .header-social:hover { color: var(--leaf); }
+    .header-social { color: var(--muted); white-space: nowrap; }
+
+    .hero { min-height: 610px; display: flex; align-items: center; position: relative; overflow: hidden; isolation: isolate; background: var(--cream); }
+    .hero::before { content: ''; position: absolute; z-index: -1; inset: 0; background-image: linear-gradient(90deg, rgba(248,241,234,0) 16%, rgba(248,241,234,.08) 42%, rgba(248,241,234,.88) 68%, var(--cream) 100%), url('https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/142640115-2931731667118356-8512538295950649356-n_6_118214-165548526013141.jpeg'); background-position: center, 33% center; background-size: cover, cover; }
+    .hero::after { content: ''; position: absolute; z-index: -1; right: -90px; bottom: -150px; width: 430px; height: 430px; border: 1px solid rgba(168,138,84,.18); border-radius: 50%; }
+    .hero-copy { padding-block: 90px; margin-left: auto; text-align: right; }
+    .hero .eyebrow { color: var(--gold); }
+    .hero .body-large { margin-bottom: 30px; margin-left: auto; }
+    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 20px; padding: 0 23px; border: 1px solid var(--ink); border-radius: var(--radius); color: var(--ink); background: transparent; text-decoration: none; font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; transition: background .2s ease, color .2s ease; }
+    .button:hover { color: var(--cream); background: var(--ink); }
+    .button--dark { color: var(--cream); border-color: var(--ink); background: var(--ink); }
+    .button--dark:hover { color: var(--ink); background: transparent; }
+    .arrow { font-size: 17px; line-height: 1; }
+
+    .intro { padding-block: 86px; background: var(--cream); }
+    .intro-grid { display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: clamp(40px, 8vw, 112px); }
+    .photo-frame { position: relative; min-height: 380px; overflow: hidden; background: linear-gradient(135deg,#e8ded4,#f4e9e2); }
+    .photo-frame img { position: absolute; inset: 0; transition: transform .6s ease; }
+    .photo-frame:hover img { transform: scale(1.025); }
+    .photo-frame--tall { min-height: 450px; }
+    .intro-copy { max-width: 490px; }
+    .intro-copy h2 { max-width: 450px; }
+    .intro-copy p { color: var(--muted); }
+    .text-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 13px; color: var(--ink); font-size: 10px; font-weight: 600; letter-spacing: .15em; text-decoration: none; text-transform: uppercase; }
+    .text-link span { color: var(--gold); font-size: 18px; transition: transform .2s ease; }
+    .text-link:hover span { transform: translateX(4px); }
+
+    .bouquets { padding-block: 82px 90px; background: var(--soft-pink); }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 35px; }
+    .section-heading h2 { margin: 0; }
+    .section-heading p { max-width: 330px; margin-bottom: 2px; color: rgba(41,37,34,.7); font-size: 14px; }
+    .bouquet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 920px; }
+    .bouquet-card { min-width: 0; }
+    .bouquet-card .photo-frame { aspect-ratio: 1.06; min-height: 0; margin-bottom: 17px; background: rgba(255,255,255,.34); }
+    .bouquet-card .photo-frame img { object-position: center; }
+    .card-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .bouquet-card h3 { margin: 0; font-size: 28px; }
+    .bouquet-card p { margin: 5px 0 0; color: rgba(41,37,34,.7); font-size: 13px; }
+    .bouquets-bottom { display: flex; justify-content: center; margin-top: 38px; }
+
+    .events { padding-block: 94px; background: #F2E9E2; }
+    .events-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(44px, 8vw, 112px); }
+    .events-copy { max-width: 480px; }
+    .events-copy p { color: var(--muted); }
+    .events-copy h2 { max-width: 470px; }
+    .event-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 25px 0 27px; padding: 0; list-style: none; }
+    .event-list li { padding: 7px 11px; border: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    .events .photo-frame { min-height: 480px; }
+    .image-caption { position: absolute; right: 13px; bottom: 13px; z-index: 1; padding: 7px 10px; color: var(--ink); background: rgba(248,241,234,.91); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+
+    .flowers { padding-block: 88px; background: var(--cream); }
+    .flowers .section-heading { margin-bottom: 31px; }
+    .flower-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .flower-tile { position: relative; min-height: 310px; overflow: hidden; background: linear-gradient(135deg,#e7ded5,#f4e9e2); }
+    .flower-tile img { position: absolute; inset: 0; transition: transform .6s ease; }
+    .flower-tile:hover img { transform: scale(1.03); }
+    .flower-tile:first-child { min-height: 360px; }
+    .tile-label { position: absolute; left: 16px; bottom: 16px; z-index: 1; padding: 8px 12px; background: rgba(248,241,234,.93); font: 500 20px var(--serif); }
+
+    .anytime { position: relative; overflow: hidden; padding-block: 74px; color: var(--cream); background: #30332D; }
+    .anytime::before, .anytime::after { content: ''; position: absolute; border: 1px solid rgba(247,196,202,.22); border-radius: 50%; pointer-events: none; }
+    .anytime::before { width: 420px; height: 420px; top: -220px; right: 5%; }
+    .anytime::after { width: 290px; height: 290px; top: -155px; right: 11%; }
+    .anytime-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 460px); align-items: center; gap: clamp(28px, 5vw, 64px); position: relative; }
+    .anytime .eyebrow { color: var(--soft-pink); }
+    .anytime h2 { max-width: 680px; margin-bottom: 13px; }
+    .anytime p { max-width: 600px; margin: 0; color: rgba(248,241,234,.75); }
+    .anytime .button { color: var(--cream); border-color: rgba(248,241,234,.7); }
+    .anytime .button:hover { color: var(--ink); background: var(--cream); }
+    .anytime-visual { min-width: 0; margin: 0; }
+    .anytime-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid rgba(248,241,234,.24); background: #232521; }
+    .anytime-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 52%; }
+    .anytime-attribution { margin-top: 9px; color: rgba(248,241,234,.64); font-size: 10px; text-align: right; }
+    .anytime-attribution a { color: inherit; text-decoration-color: rgba(248,241,234,.4); text-underline-offset: 3px; }
+    .anytime-attribution a:hover { color: var(--cream); }
+
+    .site-footer { padding-block: 53px 26px; background: #EDE5DE; }
+    .footer-top { display: flex; align-items: start; justify-content: space-between; gap: 36px; padding-bottom: 39px; border-bottom: 1px solid var(--line); }
+    .footer-brand { width: 220px; }
+    .footer-brand img { width: 100%; height: auto; }
+    .footer-note { max-width: 330px; color: var(--muted); font-size: 13px; }
+    .footer-links { display: grid; gap: 9px; }
+    .footer-links a { color: var(--ink); font-size: 12px; text-decoration: none; }
+    .footer-links a:hover { color: var(--leaf); }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 17px; color: var(--muted); font-size: 10px; }
+
+    @media (max-width: 900px) {
+      :root { --page: min(100% - 48px, 700px); }
+      .header-inner { min-height: 78px; flex-wrap: wrap; justify-content: center; padding-block: 13px; gap: 14px 24px; }
+      .brand { width: 180px; }
+      .site-nav { flex-wrap: wrap; justify-content: center; gap: 10px 21px; }
+      .site-nav a, .header-social { font-size: 9px; }
+      .hero { min-height: 570px; }
+      .hero::before { background-image: linear-gradient(90deg, rgba(248,241,234,0) 12%, rgba(248,241,234,.14) 41%, rgba(248,241,234,.94) 75%, var(--cream) 100%), url('https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/142640115-2931731667118356-8512538295950649356-n_6_118214-165548526013141.jpeg'); background-position: center, 32% center; }
+      .intro-grid, .events-grid { gap: 38px; }
+      .photo-frame--tall, .events .photo-frame { min-height: 390px; }
+      .flower-strip { grid-template-columns: 1fr 1fr; }
+      .flower-tile:first-child { min-height: 300px; }
+      .anytime-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 38px; }
+    }
+    @media (max-width: 640px) {
+      :root { --page: calc(100% - 40px); }
+      body { font-size: 14px; }
+      .header-inner { min-height: auto; padding-block: 14px 16px; }
+      .brand { width: 164px; }
+      .site-nav { width: 100%; gap: 9px 16px; }
+      .site-nav a, .header-social { font-size: 8px; letter-spacing: .08em; }
+      .hero { min-height: 590px; align-items: end; }
+      .hero::before { background-image: linear-gradient(0deg, var(--cream) 0%, rgba(248,241,234,.98) 25%, rgba(248,241,234,.67) 48%, rgba(248,241,234,.04) 79%), url('https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/142640115-2931731667118356-8512538295950649356-n_6_118214-165548526013141.jpeg'); background-position: center, 37% top; background-size: cover, auto 74%; background-repeat: no-repeat; }
+      .hero-copy { padding-block: 250px 52px; margin-left: 0; text-align: left; }
+      h1 { font-size: clamp(49px, 15vw, 70px); }
+      h2 { font-size: 45px; }
+      .body-large { font-size: 15px; }
+      .hero .body-large { margin-left: 0; }
+      .intro, .bouquets, .events, .flowers { padding-block: 57px; }
+      .intro-grid, .events-grid { grid-template-columns: 1fr; gap: 30px; }
+      .intro-grid .photo-frame { order: 2; min-height: 300px; }
+      .intro-grid .intro-copy { order: 1; }
+      .photo-frame--tall, .events .photo-frame { min-height: 350px; }
+      .section-heading { align-items: start; flex-direction: column; margin-bottom: 24px; gap: 10px; }
+      .section-heading p { max-width: 100%; }
+      .bouquet-grid { grid-template-columns: 1fr 1fr; gap: 22px 13px; }
+      .bouquet-card h3 { font-size: 24px; }
+      .bouquet-card p { font-size: 11px; }
+      .bouquet-card .photo-frame { margin-bottom: 11px; }
+      .bouquets-bottom { margin-top: 28px; }
+      .events-grid .events-copy { order: 1; }
+      .events-grid .photo-frame { order: 2; }
+      .flower-strip { gap: 10px; }
+      .flower-tile, .flower-tile:first-child { min-height: 220px; }
+      .flower-tile:first-child { min-height: 270px; }
+      .tile-label { left: 10px; bottom: 10px; font-size: 17px; }
+      .anytime { padding-block: 58px; }
+      .anytime-inner { grid-template-columns: 1fr; gap: 27px; }
+      .anytime h2 { max-width: 360px; font-size: 42px; }
+      .anytime-photo { aspect-ratio: 4 / 3; }
+      .footer-top { flex-direction: column; gap: 22px; }
+      .footer-bottom { flex-direction: column; gap: 7px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="J’Adore Floral Designers — início"><img src="assets/jadore-logo.svg" alt="J’Adore Floral Designers"></a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="#bouquets">Bouquets</a>
+        <a href="#eventos">Casamentos e eventos</a>
+        <a href="#flores-24h">Flores 24h</a>
+        <a href="#contactos">Contactos</a>
+      </nav>
+      <a class="header-social" href="https://www.instagram.com/j.adorefloraldesigner/" target="_blank" rel="noreferrer">Instagram ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="wrap hero-copy">
+        <p class="eyebrow">J’Adore Floral Designers · Póvoa de Varzim</p>
+        <h1 id="hero-title">Flores para momentos que ficam.</h1>
+        <p class="body-large">Bouquets e criações florais personalizados para oferecer, celebrar e tornar cada ocasião mais especial.</p>
+        <a class="button" href="https://www.instagram.com/j.adorefloraldesigner/" target="_blank" rel="noreferrer">Encomendar bouquet <span class="arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="wrap intro-grid">
+        <figure class="photo-frame photo-frame--tall">
+          <img src="https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/275266427-3223881027903417-184628914642404317-n_6_118214-165548526111424.jpeg" alt="Noiva com bouquet pastel do portfólio público da J’Adore" loading="lazy" referrerpolicy="no-referrer">
+        </figure>
+        <div class="intro-copy">
+          <p class="section-kicker">Feito à medida</p>
+          <h2 id="intro-title">Flores escolhidas com intenção.</h2>
+          <p>A J’Adore cria bouquets e decoração floral de acordo com a ocasião, o estilo e as preferências de cada pessoa. Cada composição nasce para acompanhar um momento com beleza e cuidado.</p>
+          <a class="text-link" href="#bouquets">Conheça os bouquets <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bouquets" id="bouquets" aria-labelledby="bouquets-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="section-kicker">Para oferecer</p><h2 id="bouquets-title">Bouquets J’Adore</h2></div>
+          <p>Uma seleção de trabalhos do portfólio. Fale com a equipa para personalizar a sua encomenda.</p>
+        </div>
+        <div class="bouquet-grid">
+          <article class="bouquet-card">
+            <figure class="photo-frame"><img src="https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/280556702-3272829253008594-3290881945998049920-n_6_118214-165548526197875.jpeg" alt="Bouquet amplo de rosas brancas, pampas e tons rosa antigo do portfólio J’Adore" loading="lazy" referrerpolicy="no-referrer"></figure>
+            <div class="card-meta"><h3>Um gesto especial</h3></div><p>Bouquet personalizado para oferecer.</p>
+          </article>
+          <article class="bouquet-card">
+            <figure class="photo-frame"><img src="https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/142755590-2931731657118357-4399814976297634279-n_6_118214-165548526024729.jpeg" alt="Close-up de rosas brancas e eucalipto nas mãos de uma noiva" loading="lazy" referrerpolicy="no-referrer"></figure>
+            <div class="card-meta"><h3>Flores para celebrar</h3></div><p>Composições pensadas para a ocasião.</p>
+          </article>
+        </div>
+        <div class="bouquets-bottom"><a class="button" href="https://www.instagram.com/j.adorefloraldesigner/" target="_blank" rel="noreferrer">Ver mais criações <span class="arrow">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="events" id="eventos" aria-labelledby="events-title">
+      <div class="wrap events-grid">
+        <div class="events-copy">
+          <p class="section-kicker">Casamentos & celebrações</p>
+          <h2 id="events-title">Um dia inesquecível, flor a flor.</h2>
+          <p>Da primeira escolha ao último detalhe, a J’Adore cria propostas florais personalizadas para acompanhar casamentos e eventos.</p>
+          <ul class="event-list"><li>Bouquet de noiva</li><li>Cerimónia</li><li>Receção</li><li>Flores para eventos</li></ul>
+          <a class="button button--dark" href="https://www.instagram.com/j.adorefloraldesigner/" target="_blank" rel="noreferrer">Pedir orçamento <span class="arrow">↗</span></a>
+        </div>
+        <figure class="photo-frame">
+          <img src="https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/271744971-3186352894989564-2149622748631974554-n_6_118214-165548526135967.jpeg" alt="Decoração de receção floral do portfólio J’Adore" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption class="image-caption">Casamentos & eventos</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="flowers" id="flores" aria-labelledby="flowers-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="section-kicker">Flores da estação</p><h2 id="flowers-title">Natureza em cada detalhe.</h2></div>
+          <p>Arranjos, bouquets e combinações florais criados com a atenção ao detalhe que marca cada ocasião.</p>
+        </div>
+        <div class="flower-strip">
+          <figure class="flower-tile"><img src="https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/143729483-2931731713785018-6140105431079260633-n_6_118214-165548526045738.jpeg" alt="Corredor de igreja decorado com flores para uma cerimónia" loading="lazy" referrerpolicy="no-referrer"><figcaption class="tile-label">Cerimónias floridas</figcaption></figure>
+          <figure class="flower-tile"><img src="https://cdn0.casamentos.pt/vendor/8214/3_2/960/jpg/142508791-2931731807118342-2244175165808986410-n_6_118214-165548526056213.jpeg" alt="Instalação floral exterior com letras AMOR para um evento" loading="lazy" referrerpolicy="no-referrer"><figcaption class="tile-label">Detalhes de evento</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="anytime" id="flores-24h" aria-labelledby="anytime-title">
+      <div class="wrap anytime-inner">
+        <div>
+          <p class="eyebrow">Um bouquet, a qualquer hora</p>
+          <h2 id="anytime-title">Flores disponíveis 24 horas.</h2>
+          <p>A J’Adore anuncia bouquets frescos numa máquina floral disponível a qualquer hora. Consulte o perfil para confirmar a localização e a disponibilidade atual.</p>
+          <a class="button" href="https://www.instagram.com/j.adorefloraldesigner/reel/DYb5nseMGCz/" target="_blank" rel="noreferrer">Ver a máquina floral <span class="arrow">↗</span></a>
+        </div>
+        <figure class="anytime-visual">
+          <div class="anytime-photo">
+            <img src="https://maissemanario.pt/wp-content/uploads/2026/08/flores.jpg" srcset="https://maissemanario.pt/wp-content/uploads/2026/08/flores-696x464.jpg 696w, https://maissemanario.pt/wp-content/uploads/2026/08/flores-1024x683.jpg 1024w, https://maissemanario.pt/wp-content/uploads/2026/08/flores.jpg 1240w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 900px) min(calc(50vw - 43px), 331px), 460px" alt="Máquina de flores J’Adore com bouquets expostos em compartimentos refrigerados, disponível 24 horas, na Póvoa de Varzim" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="anytime-attribution">Fotografia: <a href="https://maissemanario.pt/bouquet-de-flores-disponiveis-24-horas-por-dia-na-povoa-de-varzim/" target="_blank" rel="noreferrer">MAIS/Semanário ↗</a></figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contactos">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="footer-brand" href="#inicio" aria-label="Voltar ao início"><img src="assets/jadore-logo.svg" alt="J’Adore Floral Designers"></a>
+        <p class="footer-note">Flores personalizadas para oferecer, celebrar e tornar especial o que importa.</p>
+        <div class="footer-links"><a href="https://www.instagram.com/j.adorefloraldesigner/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.casamentos.pt/arranjos-florais-casamentos/jadore-floral-designer--e118214" target="_blank" rel="noreferrer">Portfólio de casamentos ↗</a></div>
+      </div>
+      <div class="footer-bottom"><span>J’Adore Floral Designers · Póvoa de Varzim</span></div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
