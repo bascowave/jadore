@@ -14,7 +14,7 @@ Landing page estática para apresentação ao cliente e deploy no [Coolify](http
 
 1. Nova aplicação → **Public Repository** → URL deste repositório GitHub
 2. Tipo de build: **Dockerfile**
-3. Porta exposta: **80**
+3. Porta exposta: **3000**
 4. Deploy
 
 ### Opção B — Site estático
